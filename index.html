@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oops! Tiny Disasters</title>
+  <meta name="description" content="A portrait iPhone game. Read the cue, tap fast, and race a live player.">
+  <link rel="icon" href="img/icon.png">
+  <style>
+    body { font-size: 18px; line-height: 1.5; color: #2c241f; }
+    .brand { font-size: 32px; line-height: 1.3; }
+    h1 { font-size: 64px; line-height: 1.3; }
+    .hero p { font-size: 24px; line-height: 1.5; }
+    h2 { font-size: 48px; line-height: 1.3; }
+    .ribbon p { font-size: 32px; line-height: 1.3; }
+  </style>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#play">Skip to the game</a>
+  <header class="wrap nav">
+    <a class="brand" href="/"><img src="img/icon.png" alt="" width="42" height="42"><span><b>Oops!</b></span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false">Menu</button>
+    <nav class="nav-links" aria-label="Pages">
+      <a href="#play">Play</a>
+      <a href="#puzzles">Puzzles</a>
+      <a href="#live">1v1</a>
+      <a href="/support">Support</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="wrap hero">
+      <div>
+        <h1>Tiny taps. Live rivals.</h1>
+        <p>A portrait iPhone game. Read the cue, tap fast, and race a live player.</p>
+        <div class="cta-row">
+          <a class="btn" href="#play">See a round</a>
+          <a class="btn ghost" href="#live">Live 1v1</a>
+        </div>
+      </div>
+      <figure class="phone">
+        <img src="img/menu.jpg" alt="The Oops! Tiny Disasters home screen, with Play, Daily, Puzzles, and Duel.">
+      </figure>
+    </section>
+
+    <section class="wrap bento" id="play">
+      <figure class="tile shot">
+        <img src="img/play.jpg" alt="A round in progress, with the cue above the choices.">
+      </figure>
+      <article class="tile butter" id="puzzles">
+        <h2>Four puzzles</h2>
+        <p>Echo, Sort, Lights, and Pairs. Each one gets meaner as you clear it.</p>
+        <ul>
+          <li>Echo repeats, then runs backwards.</li>
+          <li>Sort stacks one color.</li>
+          <li>Lights beat the clock.</li>
+          <li>Pairs flip two faces.</li>
+        </ul>
+      </article>
+      <article class="tile peach" id="live">
+        <h2>Live 1v1</h2>
+        <p>Find a player and race the same cue. A bot is there when you want a quick match.</p>
+      </article>
+    </section>
+
+    <div class="ribbon" aria-hidden="true">
+      <p>Daily · Echo · Sort · Lights · Pairs · Duel · Live 1v1 · Daily · Echo · Sort · Lights · Pairs · Duel · Live 1v1</p>
+    </div>
+
+    <section class="wrap shop">
+      <figure class="phone">
+        <img src="img/shop.jpg" alt="The coin shop, with the 500, 1800, and 5000 coin packs.">
+      </figure>
+      <div>
+        <h2>Coins for the closet</h2>
+        <p>Play for coins, or buy a pouch, a chest, or a vault. Spend them on characters, outfits, and trails.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <span>Oops! Tiny Disasters</span>
+    <nav aria-label="Legal">
+      <a href="/privacy">Privacy</a>
+      <a href="/support">Support</a>
+    </nav>
+  </footer>
+  <script>
+    const toggle = document.querySelector(".nav-toggle");
+    const links = document.querySelector(".nav-links");
+    toggle.addEventListener("click", () => {
+      const open = links.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  </script>
+</body>
+</html>
